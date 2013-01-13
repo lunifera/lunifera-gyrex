@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='201301131557.lunifera-gyrex-features' version='1.0.0.0-1cM19Kc7735935595CCG'>
+    <properties size='2'>
+      <property name='org.eclipse.equinox.p2.name' value='Lunifera Gyrex Features'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201301131557.lunifera-gyrex-features' version='1.0.0.0-1cM19Kc7735935595CCG'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.lunifera.runtime.gyrex.feature.vaadin.feature.group' range='[0.0.1.201301131557,0.0.1.201301131557]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>
