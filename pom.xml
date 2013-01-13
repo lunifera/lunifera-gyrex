@@ -19,7 +19,6 @@
 
 	<properties>
 		<next-release>0.0.2-SNAPSHOT</next-release>
-		<local-web-repo>file:/${basedir}/../../lunifera-runtime-web/org.lunifera.runtime.web.p2/target/repository</local-web-repo>
 		<tycho-version>0.16.0</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -198,17 +197,6 @@
 	</profiles>
 
 	<repositories>
-		<repository>
-			<id>local-P2</id>
-			<url>${local-web-repo}</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<layout>p2</layout>
-		</repository>
 		<repository>
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
