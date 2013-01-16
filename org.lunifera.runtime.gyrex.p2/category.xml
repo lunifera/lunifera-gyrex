@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.lunifera.runtime.gyrex.feature.vaadin_0.0.1.qualifier.jar" id="org.lunifera.runtime.gyrex.feature.vaadin" version="0.0.1.qualifier">
+   <feature id="org.lunifera.runtime.gyrex.feature.vaadin" version="0.0.0">
       <category name="lunifera-gyrex-features"/>
    </feature>
    <category-def name="lunifera-gyrex-features" label="Lunifera Gyrex Features"/>
