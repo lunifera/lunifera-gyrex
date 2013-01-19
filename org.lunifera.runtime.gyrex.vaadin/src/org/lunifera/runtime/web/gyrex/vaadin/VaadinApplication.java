@@ -95,8 +95,9 @@ public class VaadinApplication extends Application {
 		VaadinResourceProvider resourceProvider = new VaadinResourceProvider(
 				VaadinActivator.getInstance().getBundle());
 		getApplicationContext().registerServlet(getAlias(), servlet, null);
-//		getApplicationContext().registerFilter(getAlias(), getSecurityFilter(),
-//				null);
+		// getApplicationContext().registerFilter(getAlias(),
+		// getSecurityFilter(),
+		// null);
 		getApplicationContext().registerResources(RESOURCE_BASE, RESOURCE_BASE,
 				resourceProvider);
 	}
