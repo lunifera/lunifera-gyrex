@@ -1,49 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target includeMode="feature" name="org.lunifera.p2.target.juno" sequenceNumber="71">
+<target includeMode="feature" name="org.lunifera.p2.target.juno" sequenceNumber="75">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.lunifera.dependencies.feature.vaadin.feature.group" version="0.0.1.201301072205"/>
-<unit id="org.lunifera.runtime.feature.utils.assertions.feature.group" version="0.0.1.201211262109"/>
-<unit id="org.lunifera.dependencies.feature.vaadin.addon.icepush.feature.group" version="0.0.1.201301072205"/>
-<unit id="org.lunifera.dependencies.feature.equinox.feature.group" version="0.0.1.201301072205"/>
-<unit id="org.lunifera.dependencies.feature.security.shiro.feature.group" version="0.0.1.201301072205"/>
-<unit id="org.lunifera.runtime.feature.configuration.manager.feature.group" version="0.0.1.201211262109"/>
-<unit id="org.lunifera.dependencies.feature.jackrabbit.source.feature.group" version="0.0.1.qualifier"/>
-<repository location="http://lunifera.github.com/lunifera-p2/repository"/>
+<unit id="org.lunifera.dependencies.feature.vaadin.addon.icepush.feature.group" version="0.5.4"/>
+<unit id="org.lunifera.dependencies.feature.security.shiro.feature.group" version="1.2.1"/>
+<unit id="org.lunifera.dependencies.feature.equinox.feature.group" version="3.9.0.201301150557"/>
+<unit id="org.lunifera.dependencies.feature.vaadin.feature.group" version="7.0.0.201301150557"/>
+<repository location="http://lunifera.github.com/p2/kepler"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.8.0.v20120912-125810-7M7iA78fz0c6_Mey1mItD4Lmfdx9"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.xtext.sdk.feature.group" version="2.4.0.v201212180716"/>
-<unit id="org.eclipse.platform.sdk" version="4.3.0.I20121214-0730"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
-<unit id="org.slf4j.api" version="1.6.4.v20120130-2120"/>
-<unit id="org.hamcrest.library" version="1.1.0.v20090501071000"/>
-<unit id="org.junit" version="4.10.0.v4_10_0_v20120426-0900"/>
-<unit id="org.hamcrest.integration" version="1.1.0.v20090501071000"/>
-<unit id="org.hamcrest.text" version="1.1.0.v20090501071000"/>
-<unit id="org.hamcrest.core" version="1.1.0.v20090501071000"/>
-<unit id="org.apache.derby" version="10.5.1.1_v201108232300"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.9.0.v20121217-0429"/>
-<repository location="http://download.eclipse.org/releases/kepler"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.gyrex.features.sdk.feature.group" version="1.2.0.v20121007-0820-7A95-F9sHy1DoF0bO-GF89mXFd3X"/>
-<repository location="http://download.eclipse.org/gyrex/1.2/integration/I-I20130105-201301050717"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.json" version="1.0.0.v201011060100"/>
-<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository"/>
+<unit id="org.eclipse.gyrex.features.dependencies.commons.feature.group" version="1.2.0.v20121007-0820-85ARFg_F_XUFrXSoIz-mXC-8kB"/>
+<unit id="org.eclipse.gyrex.features.dependencies.provisioning.feature.group" version="0.10.0.v20121007-0820-8-7XFsFFVqA5e3Buj2YZgiYVg"/>
+<unit id="org.eclipse.gyrex.features.addons.mongodb.feature.group" version="1.0.0.v20120123-0813-2--7w3123163501724"/>
+<unit id="org.eclipse.gyrex.features.dependencies.mongodb.feature.group" version="0.10.0.v20120123-0813-3627w3123132402A38"/>
+<unit id="org.eclipse.gyrex.features.processing.feature.group" version="1.2.0.v20121007-0946-21-7w3123224102555"/>
+<unit id="org.eclipse.gyrex.features.dependencies.persistence.feature.group" version="0.10.0.v20121007-0820-7B402aw312219343411"/>
+<unit id="org.eclipse.gyrex.features.dependencies.processing.feature.group" version="0.10.0.v20121007-0820-27727w3122143A02531"/>
+<unit id="org.eclipse.gyrex.features.dependencies.admin.feature.group" version="1.2.0.v20121203-1419-7c7nFMZFBZz0gz02h08-U2iQKNk"/>
+<unit id="org.eclipse.gyrex.features.modelandservices.feature.group" version="1.2.0.v20121007-0946-7B7F-F8NcJTcLXZ69NLLc"/>
+<unit id="org.eclipse.gyrex.features.http.feature.group" version="1.2.0.v20121007-0946-679-BgJ9ELAUFZ4DXHD"/>
+<unit id="org.eclipse.gyrex.features.dependencies.solr.feature.group" version="0.10.0.v20121007-0820-7b7y1FBBoPbnRfqECaz-QA"/>
+<unit id="org.eclipse.gyrex.features.addons.jersey.jaxrs.feature.group" version="1.0.0.v20120726-1155-2--7w3124122503264"/>
+<unit id="org.eclipse.gyrex.features.kernel.feature.group" version="1.2.0.v20121007-0820-7A7H-F7RZHQZNlUz-8L7ZZ"/>
+<unit id="org.eclipse.gyrex.features.dependencies.eclipselink.feature.group" version="0.10.0.v20121007-0820-7Z7j5FCe6XgsZcfz-aEoo6z-Z"/>
+<unit id="org.eclipse.gyrex.features.admin.feature.group" version="1.2.0.v20121007-0946-797F-EVVFNWMNNe7UKj3"/>
+<unit id="org.eclipse.gyrex.features.dependencies.jersey.feature.group" version="1.0.0.v20120801-1432-67F19oB5886H9G4CIE3"/>
+<unit id="org.eclipse.gyrex.products.server.root.feature.feature.group" version="1.2.0.201301151110"/>
+<repository location="http://download.eclipse.org/gyrex/1.2/integration/"/>
 </location>
 </locations>
 </target>
