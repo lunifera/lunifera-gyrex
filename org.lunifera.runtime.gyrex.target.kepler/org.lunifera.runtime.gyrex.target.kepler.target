@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target includeMode="feature" name="org.lunifera.p2.target.juno" sequenceNumber="75">
+<target includeMode="feature" name="org.lunifera.runtime.gyrex.target.kepler" sequenceNumber="76">
 <locations>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.lunifera.dependencies.feature.vaadin.addon.icepush.feature.group" version="0.5.4"/>
-<unit id="org.lunifera.dependencies.feature.security.shiro.feature.group" version="1.2.1"/>
-<unit id="org.lunifera.dependencies.feature.equinox.feature.group" version="3.9.0.201301150557"/>
-<unit id="org.lunifera.dependencies.feature.vaadin.feature.group" version="7.0.0.201301150557"/>
-<repository location="http://lunifera.github.com/p2/kepler"/>
-</location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.gyrex.features.dependencies.commons.feature.group" version="1.2.0.v20121007-0820-85ARFg_F_XUFrXSoIz-mXC-8kB"/>
 <unit id="org.eclipse.gyrex.features.dependencies.provisioning.feature.group" version="0.10.0.v20121007-0820-8-7XFsFFVqA5e3Buj2YZgiYVg"/>
@@ -29,6 +22,14 @@
 <unit id="org.eclipse.gyrex.features.dependencies.jersey.feature.group" version="1.0.0.v20120801-1432-67F19oB5886H9G4CIE3"/>
 <unit id="org.eclipse.gyrex.products.server.root.feature.feature.group" version="1.2.0.201301151110"/>
 <repository location="http://download.eclipse.org/gyrex/1.2/integration/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.lunifera.dependencies.feature.security.shiro.feature.group" version="1.2.1"/>
+<unit id="org.lunifera.runtime.web.feature.vaadin.common.feature.group" version="0.0.1.201301220519"/>
+<unit id="org.lunifera.dependencies.feature.vaadin.addon.icepush.feature.group" version="0.5.4"/>
+<unit id="org.lunifera.dependencies.feature.vaadin.feature.group" version="7.0.0.201301220448"/>
+<unit id="org.lunifera.dependencies.feature.equinox.feature.group" version="3.9.0.201301220448"/>
+<repository location="http://lunifera.github.com/p2/kepler/latest"/>
 </location>
 </locations>
 </target>

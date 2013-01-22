@@ -1,190 +1,51 @@
+<!--#======================================================================= -->
+<!--# Copyright (c) 2012, 2013 Committers of lunifera.org - Lunifera.org. -->
+<!--# All rights reserved. This program and the accompanying materials -->
+<!--# are made available under the terms of the Eclipse Public License v1.0 -->
+<!--# which accompanies this distribution, and is available at -->
+<!--# http://www.eclipse.org/legal/epl-v10.html -->
+<!--# -->
+<!--# Contributors: -->
+<!--# Cristiano Gavião - initial API and implementation -->
+<!--#======================================================================= -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<prerequisites>
-		<maven>3.0</maven>
-	</prerequisites>
-
 	<parent>
-		<groupId>org.lunifera</groupId>
-		<artifactId>org.lunifera</artifactId>
+		<groupId>org.lunifera.releng</groupId>
+		<artifactId>org.lunifera.releng.parent.tycho.p2</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>org.lunifera.runtime.gyrex</groupId>
 	<artifactId>org.lunifera.runtime.gyrex</artifactId>
+
 	<packaging>pom</packaging>
-	<name>Lunifera :: OSGi bundles for gyrex integration : Parent POM</name>
 
 	<properties>
-		<next-release>0.0.2-SNAPSHOT</next-release>
-		<tycho-version>0.16.0</tycho-version>
+		<lunifera.deployment.p2.name>gyrex</lunifera.deployment.p2.name>
+		<lunifera.build.p2.project.name>org.lunifera.runtime.gyrex.p2</lunifera.build.p2.project.name>
 	</properties>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-compiler-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-			</plugin>
-		</plugins>
-
-	</build>
 	<profiles>
 		<profile>
-			<id>prepare-for-next-release</id>
+			<id>lunifera.build.p2</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
-				<defaultGoal>org.eclipse.tycho:tycho-versions-plugin:set-version</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho</groupId>
-						<artifactId>tycho-versions-plugin</artifactId>
-						<version>${tycho-version}</version>
-						<executions>
-							<execution>
-								<id>change-next-release</id>
-								<goals>
-									<goal>set-version</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<newVersion>${next-release}</newVersion>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>p2-juno</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<defaultGoal>verify</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho</groupId>
-						<artifactId>target-platform-configuration</artifactId>
-						<version>${tycho-version}</version>
-						<configuration>
-							<!-- <resolver>p2</resolver> -->
-							<!-- <pomDependencies>consider</pomDependencies> -->
-							<ignoreTychoRepositories>true</ignoreTychoRepositories>
-							<target>
-								<artifact>
-									<groupId>org.lunifera.runtime.gyrex</groupId>
-									<artifactId>org.lunifera.runtime.gyrex.target.juno</artifactId>
-									<version>${project.version}</version>
-								</artifact>
-							</target>
-						</configuration>
-					</plugin>
-				</plugins>
+				<defaultGoal>clean verify</defaultGoal>
 			</build>
 			<modules>
-				<module>org.lunifera.runtime.gyrex.target.juno</module>
+				<module>org.lunifera.runtime.gyrex.parent</module>
 
-				<!-- exclusive for P2 -->
 				<module>org.lunifera.runtime.gyrex.p2</module>
 
-				<!-- P2 features -->
 				<module>org.lunifera.runtime.gyrex.feature.vaadin</module>
-				<!-- end P2 features -->
 
-				<!-- P2 bundles -->
 				<module>org.lunifera.runtime.gyrex.vaadin</module>
-				<!-- end P2 bundles -->
 			</modules>
-		</profile>
-		<profile>
-			<id>p2-kepler</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<defaultGoal>verify</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.eclipse.tycho</groupId>
-						<artifactId>target-platform-configuration</artifactId>
-						<version>${tycho-version}</version>
-						<configuration>
-							<!-- <resolver>p2</resolver> -->
-							<!-- <pomDependencies>consider</pomDependencies> -->
-							<ignoreTychoRepositories>true</ignoreTychoRepositories>
-							<target>
-								<artifact>
-									<groupId>org.lunifera.runtime.gyrex</groupId>
-									<artifactId>org.lunifera.runtime.gyrex.target.kepler</artifactId>
-									<version>${project.version}</version>
-								</artifact>
-							</target>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-			<modules>
-				<module>org.lunifera.runtime.gyrex.target.kepler</module>
-
-				<!-- exclusive for P2 -->
-				<module>org.lunifera.runtime.gyrex.p2</module>
-
-				<!-- P2 features -->
-				<module>org.lunifera.runtime.gyrex.feature.vaadin</module>
-				<!-- end P2 features -->
-
-				<!-- P2 bundles -->
-				<module>org.lunifera.runtime.gyrex.vaadin</module>
-				<!-- end P2 bundles -->
-			</modules>
-		</profile>
-
-		<!-- This profile is used to gather code coverage for Sonar -->
-		<profile>
-			<id>codeCoverage</id>
-			<properties>
-				<!-- Properties to enable jacoco code coverage analysis -->
-				<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-				<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-				<sonar.jacoco.reportPath>../org.demo.camp.nantes.parent/target/jacoco.exec</sonar.jacoco.reportPath>
-			</properties>
-
-			<build>
-				<plugins>
-					<!-- Enabling use of jacoco -->
-					<plugin>
-						<groupId>org.jacoco</groupId>
-						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>0.5.8.201207111220</version>
-						<executions>
-							<execution>
-								<goals>
-									<goal>prepare-agent</goal>
-								</goals>
-								<configuration>
-									<!-- Where to put jacoco coverage report -->
-									<destFile>${sonar.jacoco.reportPath}</destFile>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
 		</profile>
 	</profiles>
 </project>
